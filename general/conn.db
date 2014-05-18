@@ -1,0 +1,23 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of conn
+ *sEHF%1NZROzp
+ * @author nelson
+ */
+function connect() {
+    try{
+    return new PDO('mysql:host=localhost;dbname=oasis', 'root', '');
+//    return new PDO("mysql:host=localhost;dbname=bigoak_oasis", "bigoak_gastro", "gastro");
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+    return $dbh;
+    }  catch (PDOException $e){
+        echo $e->getMessage();
+    }
+}
